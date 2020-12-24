@@ -1,0 +1,13 @@
+.borderButton{
+    border-style: solid !important;
+    border-width: 2px !important;
+    border-color: black !important;
+}
+.roundedCorner {
+    border-radius: 15px !important;
+}
+body{
+    background: url('../img/illustration/Background/background.png') !important; 
+    /* background-repeat: no-repeat !important; */
+    background-size: cover !important;
+}
