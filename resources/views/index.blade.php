@@ -14,10 +14,10 @@
                 and scrambled it to make a type specimen book.</p>
             <div class="row justify-content-center align-items-center p-3">
                 <div class="col-md-6">
-                    <a href="" class="btn btn-primary w-100 m-2 borderButton">Get Started</a>
+                    <a href="{{route('register')}}" class="btn btn-primary w-100 m-2 borderButton">Get Started</a>
                 </div>
                 <div class="col-md-6">
-                    <a href="" class="btn btn-light w-100 m-2 borderButton">Learn More</a>
+                    <a href="{{route('about')}}" class="btn btn-light w-100 m-2 borderButton">Learn More</a>
                 </div>
             </div>
         </div>

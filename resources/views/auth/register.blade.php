@@ -77,7 +77,7 @@
                                     <div class="col-md-10">
                                         <button type="submit"
                                             class="btn btn-primary w-100 text-white font-weight-bold roundedCorner">
-                                            {{ __('Sign Up') }}
+                                            {{ __('Daftar') }}
                                         </button>
                                     </div>
                                 </div>

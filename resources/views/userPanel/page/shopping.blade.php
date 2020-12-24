@@ -6,9 +6,9 @@
     {{-- top sales --}}
     <div class="p-4 my-2">
         <div class="row">
-            <h2 class="h2 font-weight-bold px-4">Top Sales</h2>
+            <h1 class="h1 font-weight-bold px-4">Top Sales</h1>
         </div>
-        <div class="row justify-content-center align-items-center">
+        <div class="row justify-content-center align-items-center ">
             @for ($i = 0; $i < 4; $i++) <div class="col-md-3 py-2 px-4">
                 <div class="card shadow border-0 roundedCorner text-center ">
                     <img class="card-img-top ml-auto mr-auto" src="{{asset('img/logo/tokopedia.png')}}"
@@ -26,7 +26,7 @@
 {{-- entertainment --}}
 <div class="p-4 my-2">
     <div class="row">
-        <h2 class="h2 font-weight-bold px-4">Entertainment</h2>
+        <h1 class="h1 font-weight-bold px-4">Entertainment</h1>
     </div>
     <div class="row justify-content-center align-items-center">
         @for ($i = 0; $i < 4; $i++) <div class="col-md-3 py-2 px-4">

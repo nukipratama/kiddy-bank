@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\Balance;
 use App\Models\Profile;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
@@ -79,6 +80,9 @@ class RegisterController extends Controller
             'user_id' => $user->id,
             'first_name' => $firstName,
             'last_name' => $lastName,
+        ]);
+        $balance = Balance::create([
+            'user_id' => $user->id,
         ]);
         return $user;
     }

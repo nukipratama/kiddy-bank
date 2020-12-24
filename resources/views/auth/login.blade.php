@@ -4,7 +4,6 @@
 
 @section('content')
 <div class="container">
-
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="row justify-content-center">
@@ -61,7 +60,7 @@
                                     <div class="col-md-10">
                                         <button type="submit"
                                             class="btn btn-primary w-100 text-white font-weight-bold roundedCorner">
-                                            {{ __('Sign Up') }}
+                                            {{ __('Login') }}
                                         </button>
                                     </div>
                                 </div>
