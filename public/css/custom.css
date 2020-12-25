@@ -11,3 +11,15 @@ body{
     /* background-repeat: no-repeat !important; */
     background-size: cover !important;
 }
+.dayCountOverlay{
+    border-radius:0px 15px 0px 15px !important;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+}
+.show-read-more .more-text {
+    display: none;
+}
+.title0{
+    color:var(--secondary);
+}

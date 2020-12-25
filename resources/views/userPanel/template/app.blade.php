@@ -10,7 +10,8 @@
     <title>{{ $title.' | ' ?? '' }}{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+
+
     <link rel="stylesheet" href="{{asset('css/custom.css')}}">
     @yield('customCss')
 
@@ -24,13 +25,15 @@
 </head>
 
 <body>
+    <script src="{{ asset('js/app.js') }}"></script>
     <div id="app">
         @include('userPanel.template.navbar')
         <main class=" mx-md-5 px-md-5">
             @yield('content')
         </main>
     </div>
-    @yield('customJs')
+    <script src="{{asset('js/readmore.js')}}"></script>
+    <script src="{{asset('js/contentTitle.js')}}"></script>
 </body>
 
 </html>
