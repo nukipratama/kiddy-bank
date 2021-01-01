@@ -13,9 +13,11 @@
                 @foreach ($dailyTask as $item)
                 <div class="card roundedCorner shadow border-0 mx-3 mb-3 p-3">
                     <div class="row m-0 align-items-center">
-                        <div class="col-md-8">
+                        <div class="col-md-2 text-center">
                             <small>Day
                                 {{($dailyTask ->currentpage()-1) * $dailyTask ->perpage() + $loop->index + 1}}</small>
+                        </div>
+                        <div class="col-md-6">
                             <p class="font-weight-bold m-0">{{$item->task->title}}</p>
                         </div>
                         <div class="col-md-4 text-center">
@@ -29,7 +31,7 @@
             </div>
         </div>
         <div class="col-md-6">
-            <div class="card shadow roundedCorner border-0 h-100">
+            <div class="card shadow roundedCorner border-0">
                 <div class="card-title text-center pt-3 mb-0 pb-0">
                     <h3 class="font-weight-bold">Missions</h3>
                 </div>
