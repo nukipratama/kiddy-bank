@@ -1,14 +1,17 @@
 @extends('adminPanel.template.layout',[
-'title'=>'Task'
+'title'=>'Voucher'
 ])
 @section('content')
 <div class="container mt-5">
     {{-- active --}}
     <div class="row p-2 align-items-center">
-        <h1 class="h1 mr-auto">All Task</h1>
+        <h1 class="h1 mr-auto">Active Voucher</h1>
         <div class="p-2">
-            <a href="{{route('admin.task.create')}}">
-                <button class="btn btn-primary font-weight-bold p-2">Add Task</button>
+            <a href="{{route('admin.voucher.claimed')}}">
+                <button class="btn btn-secondary font-weight-bold p-2">Claimed Voucher</button>
+            </a>
+            <a href="{{route('admin.voucher.create')}}">
+                <button class="btn btn-primary font-weight-bold p-2">Add Voucher</button>
             </a>
         </div>
     </div>
@@ -18,22 +21,26 @@
                 <tr>
                     <th scope="col">ID</th>
                     <th scope="col">Title</th>
-                    <th scope="col">Created At</th>
+                    <th scope="col">Reward</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Code</th>
                     <th scope="col">Action</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach ($task as $item)
+                @foreach ($active as $item)
                 <tr>
                     <th scope="row">{{$item->id}}</th>
                     <td>{{$item->title}}</td>
-                    <td>{{$item->created_at->format('D, d-M-Y')}}</td>
+                    <td>{{$item->reward}}</td>
+                    <td>{{$item->price . $item->unit}}</td>
+                    <td>{{$item->code}}</td>
                     <td>
-                        <a href="{{route('admin.task.show',['task'=>$item])}}"><button
+                        <a href="{{route('admin.voucher.show',['voucher'=>$item])}}"><button
                                 class="badge badge-primary">Detail</button></a>
-                        <a href="{{route('admin.task.edit',['task'=>$item])}}"><button
+                        <a href="{{route('admin.voucher.edit',['voucher'=>$item])}}"><button
                                 class="badge badge-info">Edit</button></a>
-                        <form action="{{route('admin.task.destroy',['task'=>$item])}}" method="POST">
+                        <form action="{{route('admin.voucher.destroy',['voucher'=>$item])}}" method="POST">
                             @csrf @method('DELETE')
                             <button class="badge badge-danger" type="submit">Delete</button>
                         </form>
@@ -42,7 +49,7 @@
                 @endforeach
             </tbody>
         </table>
-        {{$task->links()}}
+        {{$active->links()}}
     </div>
 </div>
 @endsection

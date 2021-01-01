@@ -14,13 +14,17 @@
                 {{Route::currentRouteName() === 'admin.users' ? 'active' : ''}}"">
                 <i class=" fas fa-users"></i> Users
             </a>
-            <a href="{{route('admin.task')}}" class="nav-item nav-link 
-            {{Route::currentRouteName() === 'admin.task' ? 'active' : ''}}"">
+            <a href="{{route('admin.task.index')}}" class="nav-item nav-link 
+            {{Route::currentRouteName() === 'admin.task.index' ? 'active' : ''}}"">
                 <i class=" fas fa-book"></i> Task
             </a>
-            <a href="{{route('admin.mission')}}" class="nav-item nav-link 
-            {{Route::currentRouteName() === 'admin.mission' ? 'active' : ''}}"">
+            <a href="{{route('admin.mission.index')}}" class="nav-item nav-link 
+            {{Route::currentRouteName() === 'admin.mission.index' ? 'active' : ''}}"">
                 <i class=" fas fa-tasks"></i> Mission
+            </a>
+            <a href="{{route('admin.voucher.index')}}" class="nav-item nav-link 
+            {{Route::currentRouteName() === 'admin.voucher.index' ? 'active' : ''}}"">
+                <i class=" fas fa-gift"></i> Voucher
             </a>
             <a href="{{route('admin.topup')}}" class="nav-item nav-link 
             {{Route::currentRouteName() === 'admin.topup' ? 'active' : ''}}"">

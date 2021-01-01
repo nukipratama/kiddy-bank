@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBalanceHistoriesTable extends Migration
+class CreateTopupTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,12 @@ class CreateBalanceHistoriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('balance_histories', function (Blueprint $table) {
+        Schema::create('topup', function (Blueprint $table) {
             $table->id();
             $table->integer('user_id');
-            $table->integer('addition')->default(0);
-            $table->integer('expense')->default(0);
-            $table->string('title');
-            $table->string('balance_type');
-            $table->string('icon');
+            $table->integer('amount');
+            $table->string('status')->default('Waiting Payment Proof');
+            $table->string('payment_proof')->nullable();
             $table->timestamps();
         });
     }
@@ -32,6 +30,6 @@ class CreateBalanceHistoriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('balance_histories');
+        Schema::dropIfExists('topup');
     }
 }

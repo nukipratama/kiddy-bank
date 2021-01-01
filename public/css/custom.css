@@ -17,6 +17,18 @@ body{
     padding: 10px;
     text-align: center;
 }
+.uploadProofOverlay{
+    border-radius:0px 0px 15px 15px !important;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+}
+.balanceOverlay{
+    border-radius:15px 0px 50px 0px !important;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+}
 .show-read-more .more-text {
     display: none;
 }
