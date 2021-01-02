@@ -9,5 +9,5 @@ class UserMission extends Model
 {
     use HasFactory;
     protected $table = 'user_mission';
-    protected $fillable = ['user_id', 'mission_id'];
+    protected $fillable = ['user_id', 'mission_id', 'status'];
 }

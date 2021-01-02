@@ -10,7 +10,7 @@ class ShoppingController extends Controller
 {
     public function index()
     {
-        $voucher = Voucher::whereNull('claim_user_id')->paginate(10);
+        $voucher = Voucher::whereNull('claim_user_id')->paginate(8);
         return view('userPanel.page.shopping', compact('voucher'));
     }
 }
